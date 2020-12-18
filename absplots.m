@@ -14,10 +14,7 @@ elseif isa(sldemo_absbrake_output,'Simulink.SimulationData.Dataset')
     figure(h)
     set(h,'DefaultAxesFontSize',8)
 
-    % data is logged in sldemo_absbrake_output
-    % this prevents the main workspace from getting cluttered
-
-    % plot wheel speed and car speed
+  
     plot(sldemo_absbrake_output.get('yout').Values.Vs.Time, ...
          sldemo_absbrake_output.get('yout').Values.Vs.Data, ... 
          sldemo_absbrake_output.get('yout').Values.Ww.Time, ...
