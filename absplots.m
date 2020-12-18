@@ -1,7 +1,7 @@
 
 
-if ~exist('absoutput','var')
-    disp('Did not find absoutput dataset to plot results.');
+if ~exist('sldemo_absbrake_output','var')
+    disp('Did not find sldemo_absbrake_output dataset to plot results.');
     disp('Please run simulation on the sldemo_absbrake model.');
 elseif isa(sldemo_absbrake_output,'Simulink.SimulationData.Dataset')
     h = findobj(0, 'Name', 'ABS Speeds');
