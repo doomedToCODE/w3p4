@@ -1,12 +1,4 @@
-%SLDEMO_ABSBRAKEPLOTS 
-%   plots the results from SLDEMO_ABSBRAKE model simulation
-%
-%   See also SLDEMO_ABSBRAKE, SLDEMO_ABSDATA
-%
 
-%   Author(s): L. Michaels, S. Quinn, 12/01/97 
-%   Edited   : G. Chistol,            08/04/06
-%   Copyright 1990-2015 The MathWorks, Inc.
 
 if ~exist('sldemo_absbrake_output','var')
     disp('Did not find sldemo_absbrake_output dataset to plot results.');
@@ -22,10 +14,6 @@ elseif isa(sldemo_absbrake_output,'Simulink.SimulationData.Dataset')
     figure(h)
     set(h,'DefaultAxesFontSize',8)
 
-    % data is logged in sldemo_absbrake_output
-    % this prevents the main workspace from getting cluttered
-
-    % plot wheel speed and car speed
     plot(sldemo_absbrake_output.get('yout').Values.Vs.Time, ...
          sldemo_absbrake_output.get('yout').Values.Vs.Data, ... 
          sldemo_absbrake_output.get('yout').Values.Ww.Time, ...
