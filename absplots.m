@@ -1,15 +1,7 @@
-%SLDEMO_ABSBRAKEPLOTS 
-%   plots the results from SLDEMO_ABSBRAKE model simulation
-%
-%   See also SLDEMO_ABSBRAKE, SLDEMO_ABSDATA
-%
 
-%   Author(s): L. Michaels, S. Quinn, 12/01/97 
-%   Edited   : G. Chistol,            08/04/06
-%   Copyright 1990-2015 The MathWorks, Inc.
 
-if ~exist('sldemo_absbrake_output','var')
-    disp('Did not find sldemo_absbrake_output dataset to plot results.');
+if ~exist('absoutput','var')
+    disp('Did not find absoutput dataset to plot results.');
     disp('Please run simulation on the sldemo_absbrake model.');
 elseif isa(sldemo_absbrake_output,'Simulink.SimulationData.Dataset')
     h = findobj(0, 'Name', 'ABS Speeds');
